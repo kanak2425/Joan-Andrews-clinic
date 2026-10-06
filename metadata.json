@@ -1,0 +1,6 @@
+{
+  "name": "Joan Andrews Denture Clinic",
+  "description": "Personalized denture clinic in St. John's, Newfoundland & Labrador. Comfortable fit, natural appearance, and experienced care by Joan Andrews.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
