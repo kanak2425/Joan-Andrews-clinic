@@ -17,5 +17,5 @@ create table if not exists public.consultation_requests (
 alter table public.consultation_requests enable row level security;
 
 -- Do not allow website visitors to read or write directly to this table.
-revoke all on table public.consultation_requests from anon, authenticated;
+revoke all on table public.consultation_requests from anon, authenticated, service_role;
 grant insert on table public.consultation_requests to service_role;
