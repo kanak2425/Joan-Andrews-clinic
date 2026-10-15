@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import clinicExterior from '../assets/images/clinic_exterior_building.jpg';
+import clinicOperatory from '../assets/images/clinic_operatory_1.jpg';
+import clinicReception from '../assets/images/clinic_reception_interior.jpg';
+import clinicConsultation from '../assets/images/clinic_consultation_room.jpg';
 import { MapPin, X, ZoomIn, Building2, Armchair, Sparkles } from 'lucide-react';
 
 export interface ClinicPhoto {
@@ -13,7 +17,7 @@ export interface ClinicPhoto {
 export const CLINIC_PHOTOS: ClinicPhoto[] = [
   {
     id: 'exterior',
-    src: '/src/assets/images/clinic_exterior_building.jpg',
+    src: clinicExterior,
     title: 'Clinic Exterior on Topsail Road',
     subtitle: '538 Topsail Rd, St. John\'s',
     description: 'Easily accessible location with dedicated free on-site parking directly in front of the ground-level entrance.',
@@ -21,7 +25,7 @@ export const CLINIC_PHOTOS: ClinicPhoto[] = [
   },
   {
     id: 'operatory',
-    src: '/src/assets/images/clinic_operatory_1.jpg',
+    src: clinicOperatory,
     title: 'Private Operatory & Fitting Suite',
     subtitle: 'Chairside Patient Care',
     description: 'Comfortable patient chair, full vanity mirror, and sanitized operatory tailored for private consultations and fitting evaluations.',
@@ -29,7 +33,7 @@ export const CLINIC_PHOTOS: ClinicPhoto[] = [
   },
   {
     id: 'reception',
-    src: '/src/assets/images/clinic_reception_interior.jpg',
+    src: clinicReception,
     title: 'Welcoming Reception & Lounge',
     subtitle: 'Relaxed Atmosphere',
     description: 'A bright, quiet, and calming waiting environment designed to help you feel comfortable from the moment you step through our door.',
@@ -37,7 +41,7 @@ export const CLINIC_PHOTOS: ClinicPhoto[] = [
   },
   {
     id: 'consultation',
-    src: '/src/assets/images/clinic_consultation_room.jpg',
+    src: clinicConsultation,
     title: 'Consultation & Treatment Room',
     subtitle: 'Gentle Direct Care',
     description: 'Modern clinical equipment where Joan personally listens to your concerns and performs meticulous adjustments.',
