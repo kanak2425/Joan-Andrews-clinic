@@ -1,4 +1,5 @@
 import React from 'react';
+import seniorSmile from '../assets/images/senior_confident_smile_1791314432472.jpg';
 import { Calendar } from 'lucide-react';
 
 interface SmileConfidenceProps {
@@ -14,7 +15,7 @@ export const SmileConfidence: React.FC<SmileConfidenceProps> = ({ onOpenBooking 
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden border border-stone-200/90 shadow-xs bg-white">
               <img
-                src="/src/assets/images/senior_confident_smile_1791314432472.jpg"
+                src={seniorSmile}
                 alt="Older adult laughing and smiling naturally and comfortably with dentures"
                 className="w-full aspect-4/3 object-cover object-center"
                 loading="lazy"

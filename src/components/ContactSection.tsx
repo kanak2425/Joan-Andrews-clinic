@@ -1,4 +1,5 @@
 import React from 'react';
+import clinicExterior from '../assets/images/clinic_exterior_building.jpg';
 import { MapPin, Phone, Clock, Navigation, Car, Accessibility } from 'lucide-react';
 
 interface ContactSectionProps {
@@ -132,7 +133,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenBooking })
             {/* Real Exterior Banner */}
             <div className="relative h-44 sm:h-52 overflow-hidden border-b border-stone-100 bg-stone-100">
               <img
-                src="/src/assets/images/clinic_exterior_building.jpg"
+                src={clinicExterior}
                 alt="Joan Andrews Denture Clinic building exterior on 538 Topsail Road with on-site parking"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"

@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import solidEnamel from '../assets/images/solid_enamel_tooth_1791314972140.jpg';
+import toothFull from '../assets/images/chatgpt_tooth_full.png';
 import { Play, Pause, RotateCcw, Volume2, VolumeX, ArrowRight, Eye, Sparkles } from 'lucide-react';
 
 interface OpeningAnimationProps {
@@ -315,7 +317,7 @@ export const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete, 
 
           {/* Stage 2: Solid Enamel 3D Tooth (emerges 2-4s, gently fades as cutaway reveals) */}
           <img
-            src="/src/assets/images/solid_enamel_tooth_1791314972140.jpg"
+            src={solidEnamel}
             alt="Pristine natural molar tooth in pure enamel"
             className="absolute inset-0 w-full h-full object-contain pointer-events-none transition-opacity duration-700"
             style={{
@@ -332,7 +334,7 @@ export const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete, 
             }}
           >
             <img
-              src="/src/assets/images/chatgpt_tooth_full.png"
+              src={toothFull}
               alt="Anatomical cross section of molar showing enamel, dentin, pulp, nerves, blood vessels and roots"
               className="w-full h-full object-contain pointer-events-none"
               style={{

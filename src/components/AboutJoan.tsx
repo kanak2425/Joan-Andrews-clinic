@@ -1,4 +1,6 @@
 import React from 'react';
+import joanPortrait from '../assets/images/joan_andrews_portrait_1791314448633.jpg';
+import clinicOperatory from '../assets/images/clinic_operatory_1.jpg';
 import { Award, UserCheck, Shield, Sparkles } from 'lucide-react';
 
 export const AboutJoan: React.FC = () => {
@@ -11,7 +13,7 @@ export const AboutJoan: React.FC = () => {
             <div className="relative mx-auto max-w-sm lg:max-w-none">
               <div className="rounded-2xl overflow-hidden border border-stone-200/90 shadow-xs bg-white">
                 <img
-                  src="/src/assets/images/joan_andrews_portrait_1791314448633.jpg"
+                  src={joanPortrait}
                   alt="Joan Andrews, experienced denturist practitioner in St. John's, NL"
                   className="w-full aspect-3/4 object-cover object-top"
                   loading="lazy"
@@ -30,7 +32,7 @@ export const AboutJoan: React.FC = () => {
               {/* Sub-card with real clinic operatory snapshot */}
               <div className="hidden sm:flex items-center gap-3 bg-white/95 backdrop-blur-xs p-3 rounded-xl border border-stone-200/80 shadow-xs absolute -bottom-6 -right-4 max-w-xs">
                 <img
-                  src="/src/assets/images/clinic_operatory_1.jpg"
+                  src={clinicOperatory}
                   alt="Joan Andrews Denture Clinic real operatory room and fitting chair"
                   className="w-14 h-14 rounded-lg object-cover border border-stone-100"
                   loading="lazy"

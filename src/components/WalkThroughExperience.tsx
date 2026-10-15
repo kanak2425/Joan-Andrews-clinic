@@ -1,4 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import toothFull from '../assets/images/chatgpt_tooth_full.png';
+import toothEnamel from '../assets/images/tooth_journey_enamel_1791315405052.jpg';
+import toothDentin from '../assets/images/tooth_journey_dentin_1791315417898.jpg';
+import toothPulp from '../assets/images/tooth_journey_pulp_1791315428976.jpg';
+import toothRoot from '../assets/images/tooth_journey_root_1791315440771.jpg';
 import { ArrowRight, ChevronRight, RotateCcw, Volume2, VolumeX, Eye } from 'lucide-react';
 
 export type JourneyStage = 'opening' | 'enamel' | 'dentin' | 'pulp' | 'root' | 'emerging';
@@ -26,7 +31,7 @@ const STAGES: StageConfig[] = [
     sub: 'Full 3D Molar Architecture',
     description: 'Every natural tooth is an architectural wonder—providing chewing stability, facial support, and natural resonance.',
     clinicalNote: 'Joan Andrews designs personalized dentures that honor this underlying biological blueprint.',
-    image: '/src/assets/images/chatgpt_tooth_full.png',
+    image: toothFull,
     cameraScale: 1.0,
     durationMs: 4000
   },
@@ -36,7 +41,7 @@ const STAGES: StageConfig[] = [
     sub: 'The protective outer layer',
     description: 'The hardest substance in the human body. Translucent crystalline prisms refract natural daylight and defend against daily wear.',
     clinicalNote: 'Our denture teeth feature multi-chromatic micro-filler acrylics that emulate real enamel translucency and luster.',
-    image: '/src/assets/images/tooth_journey_enamel_1791315405052.jpg',
+    image: toothEnamel,
     cameraScale: 1.25,
     durationMs: 3600
   },
@@ -46,7 +51,7 @@ const STAGES: StageConfig[] = [
     sub: 'The strong layer beneath the enamel',
     description: 'A resilient, shock-absorbing mineralized core traversed by millions of microscopic tubules that provide warmth and flexibility.',
     clinicalNote: 'Denture craft mimics this inner warmth so your smile appears vital and lifelike, never opaque or artificial.',
-    image: '/src/assets/images/tooth_journey_dentin_1791315417898.jpg',
+    image: toothDentin,
     cameraScale: 1.35,
     durationMs: 3600
   },
@@ -56,7 +61,7 @@ const STAGES: StageConfig[] = [
     sub: 'Where nerves and blood vessels live',
     description: 'The vital coronal chamber housing branching sensory nerve fibers and micro-capillary vascular pathways.',
     clinicalNote: 'Understanding oral neurology ensures your denture borders sit comfortably without impinging on sensitive nerve branches.',
-    image: '/src/assets/images/tooth_journey_pulp_1791315428976.jpg',
+    image: toothPulp,
     cameraScale: 1.4,
     durationMs: 3800
   },
@@ -66,7 +71,7 @@ const STAGES: StageConfig[] = [
     sub: 'Anchoring the tooth beneath the gumline',
     description: 'Dual anatomical root conduits descending deep into the alveolar bone ridge, distributing bite forces evenly across the jaw.',
     clinicalNote: 'Custom impressions at our clinic capture your unique ridge contours for maximum suction, stability, and zero rubbing.',
-    image: '/src/assets/images/tooth_journey_root_1791315440771.jpg',
+    image: toothRoot,
     cameraScale: 1.5,
     durationMs: 3800
   }

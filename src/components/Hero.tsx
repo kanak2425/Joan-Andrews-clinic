@@ -1,4 +1,5 @@
 import React from 'react';
+import heroSmile from '../assets/images/hero_natural_smile_1791314418842.jpg';
 import { Phone, Calendar, MapPin, Star, Play } from 'lucide-react';
 
 interface HeroProps {
@@ -81,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onPlayIntro }) => {
               {/* Subtle hairline framing */}
               <div className="relative rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm bg-stone-50">
                 <img
-                  src="/src/assets/images/hero_natural_smile_1791314418842.jpg"
+                  src={heroSmile}
                   alt="Healthy, natural and confident smile achieved with personalized dentures at Joan Andrews Denture Clinic"
                   className="w-full aspect-4/3 object-cover object-center"
                   loading="eager"

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import clinicExterior from '../../assets/images/clinic_exterior_building.jpg';
+import clinicOperatory from '../../assets/images/clinic_operatory_1.jpg';
 import { MapPin, Phone, Clock, Navigation, Car, Accessibility, Calendar, CheckCircle, AlertCircle } from 'lucide-react';
 import { SERVICES_DATA } from '../ServicesSection';
 
@@ -324,7 +326,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5 bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-2xs flex flex-col justify-between">
             <div className="relative h-48 bg-stone-100 overflow-hidden">
               <img
-                src="/src/assets/images/clinic_exterior_building.jpg"
+                src={clinicExterior}
                 alt="Exterior of 538 Topsail Rd clinic building"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -341,7 +343,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               </p>
               <div className="pt-2 border-t border-stone-100 flex items-center gap-3">
                 <img
-                  src="/src/assets/images/clinic_operatory_1.jpg"
+                  src={clinicOperatory}
                   alt="Operatory suite"
                   className="w-12 h-12 rounded-lg object-cover border border-stone-200"
                 />

@@ -1,4 +1,6 @@
 import React from 'react';
+import joanPortrait from '../assets/images/joan_andrews_portrait_1791314448633.jpg';
+import clinicOperatory from '../assets/images/clinic_operatory_1.jpg';
 import { UserCheck, Sparkles, Smile, ShieldCheck, HeartHandshake } from 'lucide-react';
 
 interface WhyJoanSectionProps {
@@ -34,7 +36,7 @@ export const WhyJoanSection: React.FC<WhyJoanSectionProps> = ({ onOpenBooking })
               {/* Joan Portrait Card */}
               <div className="rounded-3xl overflow-hidden border border-stone-200 shadow-sm bg-white">
                 <img
-                  src="/src/assets/images/joan_andrews_portrait_1791314448633.jpg"
+                  src={joanPortrait}
                   alt="Joan Andrews, experienced denturist in St. John's, NL"
                   className="w-full aspect-3/4 object-cover object-top"
                   loading="lazy"
@@ -57,7 +59,7 @@ export const WhyJoanSection: React.FC<WhyJoanSectionProps> = ({ onOpenBooking })
               {/* Inset Operatory Room Card from Real Google Maps Photo */}
               <div className="hidden sm:flex items-center gap-3 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-stone-200 shadow-md absolute -bottom-6 -right-6 max-w-xs animate-fadeIn">
                 <img
-                  src="/src/assets/images/clinic_operatory_1.jpg"
+                  src={clinicOperatory}
                   alt="Real consultation operatory at 538 Topsail Road"
                   className="w-14 h-14 rounded-xl object-cover border border-stone-200 shrink-0"
                   loading="lazy"
