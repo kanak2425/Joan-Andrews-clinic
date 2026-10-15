@@ -1,4 +1,10 @@
 import React from 'react';
+import joanPortrait from '../../assets/images/joan_andrews_portrait_1791314448633.jpg';
+import clinicExterior from '../../assets/images/clinic_exterior_building.jpg';
+import clinicOperatory from '../../assets/images/clinic_operatory_1.jpg';
+import clinicReception from '../../assets/images/clinic_reception_interior.jpg';
+import clinicConsultation from '../../assets/images/clinic_consultation_room.jpg';
+import dentureDetail from '../../assets/images/denture_craftsmanship_detail_1791314460461.jpg';
 import { Calendar, Phone, CheckCircle2, Heart, Award, Sparkles, MapPin } from 'lucide-react';
 
 interface AboutPageProps {
@@ -32,7 +38,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking, onNavigate 
           <div className="lg:col-span-5">
             <div className="rounded-2xl overflow-hidden border border-stone-200 shadow-xs bg-white">
               <img
-                src="/src/assets/images/joan_andrews_portrait_1791314448633.jpg"
+                src={joanPortrait}
                 alt="Joan Andrews, denturist in St. John's, Newfoundland"
                 className="w-full aspect-3/4 object-cover object-top"
                 loading="eager"
@@ -146,7 +152,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking, onNavigate 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <div className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs">
               <img
-                src="/src/assets/images/clinic_exterior_building.jpg"
+                src={clinicExterior}
                 alt="Clinic exterior building on Topsail Road"
                 className="w-full aspect-4/3 object-cover"
                 loading="lazy"
@@ -159,7 +165,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking, onNavigate 
 
             <div className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs">
               <img
-                src="/src/assets/images/clinic_operatory_1.jpg"
+                src={clinicOperatory}
                 alt="Private patient fitting operatory"
                 className="w-full aspect-4/3 object-cover"
                 loading="lazy"
@@ -172,7 +178,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking, onNavigate 
 
             <div className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs">
               <img
-                src="/src/assets/images/clinic_reception_interior.jpg"
+                src={clinicReception}
                 alt="Welcoming reception and waiting area"
                 className="w-full aspect-4/3 object-cover"
                 loading="lazy"
@@ -185,7 +191,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking, onNavigate 
 
             <div className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs">
               <img
-                src="/src/assets/images/clinic_consultation_room.jpg"
+                src={clinicConsultation}
                 alt="Consultation and treatment suite"
                 className="w-full aspect-4/3 object-cover"
                 loading="lazy"
@@ -201,7 +207,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking, onNavigate 
         {/* Craftsmanship detail photo banner */}
         <div className="rounded-2xl border border-stone-200/90 overflow-hidden bg-white p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8">
           <img
-            src="/src/assets/images/denture_craftsmanship_detail_1791314460461.jpg"
+            src={dentureDetail}
             alt="Meticulous denture finishing craftsmanship"
             className="w-full md:w-64 aspect-4/3 object-cover rounded-xl border border-stone-100"
             loading="lazy"
