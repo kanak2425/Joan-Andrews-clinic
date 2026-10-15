@@ -79,7 +79,7 @@ export const ConsultationBooking: React.FC<ConsultationBookingProps> = ({ initia
     setCurrentStep((prev) => Math.min(4, prev + 1));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
 
@@ -93,10 +93,30 @@ export const ConsultationBooking: React.FC<ConsultationBookingProps> = ({ initia
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/consultations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName,
+          phone,
+          email,
+          service: selectedServiceName,
+          preferredDate: selectedDate,
+          preferredTime: selectedTime,
+          notes: message,
+        }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(typeof result.error === 'string' ? result.error : 'We could not send your request. Please call the clinic.');
+      }
       setIsSubmitted(true);
-    }, 400);
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'We could not send your request. Please call the clinic.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
