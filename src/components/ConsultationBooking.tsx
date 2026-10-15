@@ -27,7 +27,7 @@ export const ConsultationBooking: React.FC<ConsultationBookingProps> = ({ initia
   const [selectedService, setSelectedService] = useState<string>(initialServiceId || 'consultation');
   
   // Interactive Calendar states
-  const [selectedDate, setSelectedDate] = useState<string>('2026-10-12');
+  const [selectedDate, setSelectedDate] = useState<string>('2026-10-15');
   const [currentMonth, setCurrentMonth] = useState<string>('October 2026');
   
   // Time selection
@@ -46,13 +46,13 @@ export const ConsultationBooking: React.FC<ConsultationBookingProps> = ({ initia
   // Calendar days generation
   const daysInOctober = [
     { day: 5, date: '2026-10-05', isPast: true },
-    { day: 6, date: '2026-10-06', isPast: false }, // Today
-    { day: 7, date: '2026-10-07', isPast: false },
-    { day: 8, date: '2026-10-08', isPast: false },
-    { day: 9, date: '2026-10-09', isPast: false },
-    { day: 12, date: '2026-10-12', isPast: false },
-    { day: 13, date: '2026-10-13', isPast: false },
-    { day: 14, date: '2026-10-14', isPast: false },
+    { day: 6, date: '2026-10-06', isPast: true },
+    { day: 7, date: '2026-10-07', isPast: true },
+    { day: 8, date: '2026-10-08', isPast: true },
+    { day: 9, date: '2026-10-09', isPast: true },
+    { day: 12, date: '2026-10-12', isPast: true },
+    { day: 13, date: '2026-10-13', isPast: true },
+    { day: 14, date: '2026-10-14', isPast: true },
     { day: 15, date: '2026-10-15', isPast: false },
     { day: 16, date: '2026-10-16', isPast: false },
     { day: 19, date: '2026-10-19', isPast: false },
