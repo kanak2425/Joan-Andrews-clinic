@@ -18,4 +18,4 @@ alter table public.consultation_requests enable row level security;
 
 -- Do not allow website visitors to read or write directly to this table.
 revoke all on table public.consultation_requests from anon, authenticated;
-grant all on table public.consultation_requests to service_role;
+grant insert on table public.consultation_requests to service_role;
