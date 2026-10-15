@@ -29,11 +29,10 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
 
-    // Basic validation
     if (!formData.fullName.trim()) {
       setErrorMessage('Please enter your full name.');
       return;
@@ -44,11 +43,29 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
     }
 
     setIsSubmitting(true);
-    // Simulate swift confirmation
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/consultations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          phone: formData.phone,
+          email: formData.email,
+          service: SERVICES_DATA.find((service) => service.id === formData.serviceId)?.title || formData.serviceId,
+          preferredTimeWindow: formData.preferredTime,
+          notes: formData.notes,
+        }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(typeof result.error === 'string' ? result.error : 'We could not send your request. Please call the clinic.');
+      }
       setIsSubmitted(true);
-    }, 450);
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'We could not send your request. Please call the clinic.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
